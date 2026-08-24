@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-Disallow: /api/
 Sitemap: https://serviciotecnicoamasadoras.com.es/sitemap.xml

@@ -1,0 +1,176 @@
+
+:root{
+  --ink:#101923;
+  --navy:#102b52;
+  --blue:#17468f;
+  --blue2:#2e6ec6;
+  --ice:#edf5ff;
+  --soft:#f7f9fc;
+  --line:#d9e2ee;
+  --muted:#5f6f82;
+  --green:#25D366;
+  --warn:#fff2e7;
+  --orange:#df7b2d;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.55}
+a{text-decoration:none;color:inherit}
+.wrap{width:min(1180px,92%);margin:auto}
+
+/* Header */
+.header{position:sticky;top:0;z-index:9000;background:#0f2e59;border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{height:48px;max-width:280px;object-fit:contain;border-radius:10px}
+.links{display:flex;gap:22px;align-items:center;color:#fff;font-size:14px;font-weight:850}
+.links a:hover{color:#9ec8ff}
+.navcall{padding:11px 16px;border-radius:999px;background:#fff;color:#0f2e59!important}
+
+/* Hero */
+.hero{
+  position:relative;overflow:hidden;padding:78px 0 86px;
+  background:
+    radial-gradient(circle at 84% 18%,rgba(46,110,198,.16),transparent 24%),
+    linear-gradient(145deg,#eef5ff 0 58%,#dfeaff 58% 100%);
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    repeating-linear-gradient(45deg,rgba(23,70,143,.04) 0 1px,transparent 1px 18px);
+}
+.hero::after{
+  content:"KITCHENAID · AMASADORAS · ROBOTS · MADRID";
+  position:absolute;left:-28px;bottom:12px;
+  font-size:68px;font-weight:950;letter-spacing:8px;
+  color:transparent;-webkit-text-stroke:1px rgba(23,70,143,.08);
+  white-space:nowrap;pointer-events:none
+}
+.hero-blob{
+  position:absolute;right:-120px;top:-110px;width:390px;height:390px;
+  background:rgba(23,70,143,.06);
+  border-radius:42% 58% 62% 38% / 39% 45% 55% 61%;
+  transform:rotate(18deg)
+}
+.hero-ring{
+  position:absolute;right:6%;bottom:14%;width:120px;height:120px;
+  border:18px solid rgba(23,70,143,.07);border-radius:50%
+}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.18fr .82fr;gap:54px;align-items:start}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--blue);font-size:12px;font-weight:950;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
+.eyebrow::before{content:"";width:34px;height:4px;background:var(--blue);border-radius:999px}
+h1{font-size:clamp(38px,4.35vw,57px);line-height:1.02;letter-spacing:-2.2px;margin:0 0 24px;max-width:790px}
+.accent{color:var(--blue)}
+.diagnosis{display:inline-flex;align-items:center;gap:12px;margin:8px 0 28px;padding:13px 17px;border-radius:16px;background:var(--warn);border:1px solid #efc49f}
+.diagnosis span{display:grid;place-items:center;width:31px;height:31px;border-radius:50%;background:var(--orange);color:#fff;font-weight:950}
+.diagnosis strong{color:var(--orange);font-size:18px}
+.ctas{display:grid;grid-template-columns:1.18fr .82fr;gap:11px;max-width:790px}
+.cta{min-height:62px;display:flex;align-items:center;justify-content:center;text-align:center;padding:13px 17px;border-radius:16px;font-weight:900}
+.cta svg{width:22px;height:22px;margin-right:8px;flex:0 0 22px}
+.wa{background:var(--green);color:#fff}
+.pickup{background:var(--blue);color:#fff}
+.phone{grid-column:1/-1;border:2px solid var(--navy);background:#fff;color:var(--navy)}
+
+/* Info card */
+.info{background:rgba(255,255,255,.97);border:1px solid var(--line);border-radius:30px;padding:28px;box-shadow:0 28px 70px rgba(16,43,82,.16);position:relative;overflow:hidden}
+.info::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--blue),#7db7ff)}
+.info .label{font-size:12px;color:var(--blue);font-weight:950;letter-spacing:2px;text-transform:uppercase}
+.info h2{font-size:28px;line-height:1.05;margin:10px 0 20px}
+.info-row{padding:13px 0;border-top:1px solid var(--line)}
+.info-row small{display:block;color:#748194;margin-bottom:3px}
+.reference{margin-top:14px;padding:16px;border-radius:17px;background:#f2f6fb}
+.reference p{margin:5px 0}
+.maplink{display:inline-block;margin-top:16px;color:var(--blue);font-weight:900}
+
+/* Sections */
+section{padding:82px 0}
+.kicker{color:var(--blue);font-size:12px;letter-spacing:2px;font-weight:950;text-transform:uppercase}
+.title{font-size:clamp(34px,4vw,52px);letter-spacing:-1.8px;line-height:1.04;margin:10px 0 15px}
+.lead{font-size:18px;color:var(--muted);max-width:820px}
+
+/* Products / problems */
+.problems{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.problems::after{content:"KITCHENAID";position:absolute;right:-40px;bottom:-80px;font-size:164px;font-weight:950;color:#173860}
+.problem-grid{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px}
+.problem{background:#173a6b;border:1px solid #2d568d;border-radius:23px;padding:24px;min-height:185px}
+.problem .num{color:#9ec8ff;font-weight:950}
+.problem h3{font-size:22px;margin:24px 0 8px}
+.problem p{color:#d8e1ef;margin:0}
+
+/* KitchenAid specific section */
+.care{background:#fff}
+.care-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:54px;align-items:center}
+.care-art{min-height:390px;border-radius:36px;background:linear-gradient(145deg,#17468f,#102b52);position:relative;overflow:hidden}
+.care-art::before{content:"MEZCLA";position:absolute;left:24px;top:28px;font-size:100px;font-weight:950;color:transparent;-webkit-text-stroke:2px rgba(255,255,255,.26);transform:rotate(-5deg)}
+.care-art::after{content:"MOTOR · ENGRANAJES · CONTROLES · ACCESORIOS";position:absolute;left:35px;right:35px;bottom:35px;background:#fff;color:#102b52;padding:19px;border-radius:15px;font-weight:950;letter-spacing:.6px}
+.ticks{display:grid;gap:14px;margin-top:24px}
+.tick{display:flex;gap:12px}
+.tick i{width:27px;height:27px;border-radius:50%;background:#e9f2ff;color:var(--blue);display:grid;place-items:center;font-style:normal;font-weight:950;flex:0 0 auto}
+
+/* Steps */
+.steps{background:var(--soft)}
+.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:30px}
+.step{background:#fff;border:1px solid var(--line);border-bottom:5px solid var(--blue);border-radius:20px;padding:24px;min-height:205px}
+.step strong{display:block;font-size:44px;color:#d6deea}
+.cost-note{margin-top:26px;padding:18px 20px;border-radius:16px;background:var(--warn);border:1px solid #efc39f}
+.cost-note strong{color:var(--orange)}
+
+/* Pickup */
+.pickup-panel{display:grid;grid-template-columns:1.05fr .95fr;border-radius:34px;overflow:hidden;background:#102b52;color:#fff}
+.pickup-copy,.pickup-side{padding:48px}
+.pickup-side{background:var(--blue)}
+.pickup-side .big{font-size:58px;font-weight:950;line-height:.94}
+.pickup-side a{display:block;margin-top:20px;background:#fff;color:#102b52;padding:15px 20px;border-radius:13px;font-weight:950;text-align:center}
+
+/* Trust */
+.trust-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.trust{border-radius:28px;padding:30px;color:#fff;min-height:220px;display:flex;flex-direction:column;justify-content:flex-end}
+.google{background:#245b9d}.youtube{background:#c9161d}.trust h3{font-size:28px;margin:8px 0}
+
+/* Calendar, FAQ, Form */
+.cal-frame{width:100%;height:720px;border:0;background:#fff}
+.faq{background:#f5f8fc}
+details{background:#fff;border:1px solid var(--line);border-radius:15px;padding:18px 20px;margin:10px 0}
+summary{font-weight:900}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.full{grid-column:1/-1}
+input,textarea{width:100%;padding:15px;border:1px solid #cbd5e3;border-radius:11px;font:inherit;background:#fff}
+textarea{min-height:145px;resize:vertical}
+.submit{border:0;background:var(--blue);color:#fff;padding:16px;border-radius:12px;font-weight:950;font-size:16px;cursor:pointer}
+.map{width:100%;height:390px;border:0;border-radius:22px}
+
+/* Footer */
+footer{background:#102b52;color:#fff;padding:34px 0}
+.footer{display:flex;justify-content:space-between;gap:30px;align-items:center}
+.footer img{height:42px;max-width:250px;border-radius:8px}
+
+/* Floating actions */
+.float-wa{position:fixed;right:22px;bottom:22px;z-index:10020;width:62px;height:62px;border-radius:50%;background:var(--green);display:grid;place-items:center;box-shadow:0 12px 28px rgba(0,0,0,.23)}
+.float-wa svg{width:33px;height:33px;color:#fff}
+
+/* n8n */
+#n8n-chat{--chat--color-primary:#102b52;--chat--color-secondary:#17468f;--chat--toggle--background:#102b52;--chat--toggle--hover--background:#17468f;--chat--toggle--active--background:#17468f}
+#n8n-chat .chat-window-toggle,#n8n-chat [class*="chat-window-toggle"]{position:fixed!important;right:22px!important;bottom:96px!important;z-index:10060!important}
+#n8n-chat .chat-window,#n8n-chat [class*="chat-window"]{position:fixed!important;right:22px!important;bottom:166px!important;z-index:10100!important;max-height:calc(100vh - 190px)!important}
+#n8n-chat .chat-input,#n8n-chat [class*="chat-input"],#n8n-chat .chat-footer,#n8n-chat [class*="chat-footer"]{position:sticky!important;bottom:0!important;z-index:10110!important;background:#fff!important}
+
+@media(max-width:920px){
+  .links{display:none}
+  .hero-grid,.care-grid,.contact-grid,.pickup-panel{grid-template-columns:1fr}
+  .problem-grid{grid-template-columns:repeat(2,1fr)}
+  .steps-grid{grid-template-columns:repeat(2,1fr)}
+  .trust-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .wrap{width:min(100% - 28px,1180px)}
+  .hero{padding-top:46px}
+  h1{font-size:40px;letter-spacing:-1.5px}
+  .problem-grid,.steps-grid,.ctas,form{grid-template-columns:1fr}
+  .phone,.full{grid-column:auto}
+  .hero::after{display:none}
+  .cal-frame{height:760px}
+  .footer{flex-direction:column;align-items:flex-start}
+  .float-wa{right:16px!important;bottom:18px!important}
+  #n8n-chat .chat-window-toggle,#n8n-chat [class*="chat-window-toggle"]{right:16px!important;bottom:96px!important}
+  #n8n-chat .chat-window,#n8n-chat [class*="chat-window"]{left:12px!important;right:12px!important;width:auto!important;bottom:166px!important}
+}
