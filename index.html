@@ -18,14 +18,16 @@
 <header class="header">
 <div class="wrap nav">
   <a href="#inicio"><img class="logo" src="/assets/logo-kitchenaidtech.png" alt="KitchenaidTech"></a>
-  <nav class="links">
+  <nav class="links" id="mainMenu">
     <a href="#problemas">Qué le pasa</a>
     <a href="#revision">Qué revisamos</a>
     <a href="#recogida">Recogida</a>
     <a href="#cita">Pedir cita</a>
+    <a href="#sobre-kitchenaid">Sobre KitchenAid</a>
     <a href="#contacto">Contacto</a>
     <a class="navcall" href="tel:+34914468503">Atención Telefónica 24 horas 365 días</a>
   </nav>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainMenu">Menú</button>
 </div>
 </header>
 
@@ -176,6 +178,23 @@
 </div>
 </section>
 
+<section class="seo-content" id="sobre-kitchenaid">
+<div class="wrap">
+  <div class="kicker">Servicio técnico KitchenAid en Madrid</div>
+  <h2 class="title">Reparación de amasadoras, batidoras y robots de cocina KitchenAid</h2>
+
+  <div class="seo-text">
+    <p>KitchenAid es una de las marcas de referencia en pequeño electrodoméstico de cocina, conocida especialmente por sus <strong>amasadoras y robots de cocina Stand Mixer</strong>, aunque también fabrica batidoras de vaso, procesadores de alimentos, licuadoras y otros equipos para uso doméstico y semiprofesional. Cuando uno de estos aparatos deja de funcionar con normalidad —pierde fuerza, hace ruidos extraños, se calienta o se detiene al trabajar con masa o mezcla— no siempre es necesario sustituirlo: en muchos casos el problema tiene solución con un diagnóstico adecuado.</p>
+
+    <p>En <strong>KitchenaidTech</strong> ofrecemos servicio técnico especializado en la reparación de productos KitchenAid en Madrid. Revisamos motor, engranajes, transmisión, controles de velocidad y acoples de accesorios para localizar la causa real de la avería antes de proponer una reparación, evitando sustituir piezas al azar. Trabajamos tanto con equipos de uso doméstico como con amasadoras sometidas a un uso más intensivo, donde el desgaste de componentes mecánicos suele ser más habitual.</p>
+
+    <p>Nuestro taller está en el barrio de Moncloa (Madrid), con servicio de recogida disponible para quienes no pueden desplazarse con el equipo. El diagnóstico tiene un coste de 20 € + IVA y te permite conocer con claridad qué le ocurre a tu KitchenAid antes de decidir si merece la pena repararlo.</p>
+
+    <p><small>KitchenaidTech es un servicio técnico independiente. KitchenAid es una marca registrada de su respectivo titular; no somos servicio técnico oficial de la marca.</small></p>
+  </div>
+</div>
+</section>
+
 <section class="faq">
 <div class="wrap">
   <div class="kicker">Preguntas frecuentes</div>
@@ -260,7 +279,7 @@ createChat({
     if(!root)return;
 
     const toggle=root.querySelector('.chat-window-toggle,[class*="chat-window-toggle"]');
-    const win=root.querySelector('.chat-window,[class*="chat-window"]');
+    const win=root.querySelector('.chat-window:not([class*="toggle"]),[class*="chat-window"]:not([class*="toggle"])');
     const mobile=matchMedia('(max-width:600px)').matches;
 
     if(toggle){
@@ -293,6 +312,17 @@ createChat({
 
   boot();
 })();
+
+const menuBtn=document.getElementById('menuBtn');
+const mainMenu=document.getElementById('mainMenu');
+menuBtn?.addEventListener('click',()=>{
+  const open=mainMenu.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded',open?'true':'false');
+});
+mainMenu?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  mainMenu.classList.remove('open');
+  menuBtn.setAttribute('aria-expanded','false');
+}));
 
 const form=document.getElementById('contact-form');
 const statusEl=document.getElementById('form-status');
