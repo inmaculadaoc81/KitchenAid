@@ -24,7 +24,7 @@ a{text-decoration:none;color:inherit}
 .logo{height:48px;max-width:280px;object-fit:contain;border-radius:10px}
 .links{display:flex;gap:22px;align-items:center;color:#fff;font-size:14px;font-weight:850}
 .links a:hover{color:#9ec8ff}
-.navcall{padding:11px 16px;border-radius:999px;background:#fff;color:#0f2e59!important}
+.navcall{padding:11px 16px;border-radius:999px;background:#fff;color:#0f2e59!important;white-space:nowrap}
 .menu-btn{display:none;border:1px solid rgba(255,255,255,.25);background:transparent;color:#fff;border-radius:11px;padding:10px 14px;font-weight:900;font:inherit;cursor:pointer}
 
 /* Hero */
@@ -59,7 +59,7 @@ a{text-decoration:none;color:inherit}
 .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.18fr .82fr;gap:54px;align-items:start}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--blue);font-size:12px;font-weight:950;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
 .eyebrow::before{content:"";width:34px;height:4px;background:var(--blue);border-radius:999px}
-h1{font-size:clamp(38px,4.35vw,57px);line-height:1.02;letter-spacing:-2.2px;margin:0 0 24px;max-width:790px}
+h1{font-size:clamp(46px,5.6vw,74px);line-height:1.03;letter-spacing:-2.4px;margin:0 0 24px;max-width:790px}
 .accent{color:var(--blue)}
 .diagnosis{display:inline-flex;align-items:center;gap:12px;margin:8px 0 28px;padding:13px 17px;border-radius:16px;background:var(--warn);border:1px solid #efc49f}
 .diagnosis span{display:grid;place-items:center;width:31px;height:31px;border-radius:50%;background:var(--orange);color:#fff;font-weight:950}
@@ -151,7 +151,7 @@ footer{background:#102b52;color:#fff;padding:34px 0}
 
 /* n8n */
 #n8n-chat{--chat--color-primary:#102b52;--chat--color-secondary:#17468f;--chat--toggle--background:#102b52;--chat--toggle--hover--background:#17468f;--chat--toggle--active--background:#17468f}
-#n8n-chat .chat-window-toggle,#n8n-chat [class*="chat-window-toggle"]{position:fixed!important;right:22px!important;bottom:96px!important;z-index:10060!important}
+#n8n-chat .chat-window-toggle,#n8n-chat [class*="chat-window-toggle"]{position:fixed!important;right:22px!important;bottom:96px!important;z-index:10060!important;border:1px solid #fff!important}
 #n8n-chat .chat-window:not([class*="toggle"]),#n8n-chat [class*="chat-window"]:not([class*="toggle"]){position:fixed!important;right:22px!important;bottom:166px!important;z-index:10100!important;max-height:calc(100vh - 190px)!important}
 #n8n-chat .chat-input,#n8n-chat [class*="chat-input"],#n8n-chat .chat-footer,#n8n-chat [class*="chat-footer"]{position:sticky!important;bottom:0!important;z-index:10110!important;background:#fff!important}
 
@@ -167,7 +167,7 @@ footer{background:#102b52;color:#fff;padding:34px 0}
 @media(max-width:600px){
   .wrap{width:min(100% - 28px,1180px)}
   .hero{padding-top:46px}
-  h1{font-size:40px;letter-spacing:-1.5px}
+  h1{font-size:48px;letter-spacing:-1.5px}
   .problem-grid,.steps-grid,.ctas,form{grid-template-columns:1fr}
   .phone,.full{grid-column:auto}
   .hero::after{display:none}
