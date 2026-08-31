@@ -1,5 +1,28 @@
 KitchenaidTech ONE PAGE
 
+REVISIÓN ADICIONAL (a petición del cliente):
+- BUG REAL — "en el logo no se ve el nombre": el archivo
+  /assets/logo-kitchenaidtech.png es solo el isotipo (batidora +
+  engranaje + llave inglesa), sin ningún texto de marca incluido en la
+  imagen. En la cabecera, el logo se mostraba solo, sin ningún texto
+  junto a él (a diferencia del footer, que sí tenía la línea
+  "KitchenaidTech · Servicio técnico..." al lado). Añadido
+  <span class="brand-name">KitchenAidTech</span> junto al icono en la
+  cabecera, en blanco y en negrita, para que el nombre de la marca sea
+  visible ahí también. No se ha tocado el footer, que ya mostraba el
+  nombre correctamente.
+- BUG REAL, PERO NO DE CÓDIGO — "el formulario no funciona":
+  diagnosticado en directo contra
+  https://serviciotecnicoamasadoras.com.es/api/contacto, que devuelve
+  una página 404 de WordPress (tema Kadence). El dominio actualmente
+  NO apunta a este despliegue de Vercel, sino a otra instalación
+  distinta (mismo patrón ya visto hoy en Dysonweb2 y ReparaFix). El
+  código del formulario en sí no se ha podido verificar en producción
+  por este motivo, pero coincide correctamente con api/contacto.js.
+  Revisar en Vercel (Project Settings → Domains) o en el proveedor del
+  dominio que serviciotecnicoamasadoras.com.es esté correctamente
+  apuntado a este proyecto.
+
 Dominio:
 https://serviciotecnicoamasadoras.com.es/
 

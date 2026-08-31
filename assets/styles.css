@@ -24,6 +24,8 @@ a{text-decoration:none;color:inherit}
 .privacy-link{color:var(--blue2);text-decoration:underline}
 .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
 .logo{height:48px;max-width:280px;object-fit:contain;border-radius:10px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand-name{color:#fff;font-weight:900;font-size:18px;letter-spacing:-.3px;white-space:nowrap}
 .links{display:flex;gap:22px;align-items:center;color:#fff;font-size:14px;font-weight:850}
 .links a:hover{color:#9ec8ff}
 .navcall{padding:11px 16px;border-radius:999px;background:#fff;color:#0f2e59!important;white-space:nowrap}
@@ -170,6 +172,7 @@ footer{background:#102b52;color:#fff;padding:34px 0}
 }
 @media(max-width:600px){
   .wrap{width:min(100% - 28px,1180px)}
+  .brand-name{font-size:15px}
   .hero{padding-top:46px}
   h1{font-size:48px;letter-spacing:-1.5px}
   .problem-grid,.steps-grid,.ctas,form{grid-template-columns:1fr}
