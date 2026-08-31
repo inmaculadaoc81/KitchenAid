@@ -20,6 +20,8 @@ a{text-decoration:none;color:inherit}
 
 /* Header */
 .header{position:sticky;top:0;z-index:9000;background:#0f2e59;border-bottom:1px solid rgba(255,255,255,.08)}
+.disclaimer-bar{background:#ffce31;color:#0f2e59;text-align:center;font-size:12.5px;font-weight:800;padding:8px 16px}
+.privacy-link{color:var(--blue2);text-decoration:underline}
 .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
 .logo{height:48px;max-width:280px;object-fit:contain;border-radius:10px}
 .links{display:flex;gap:22px;align-items:center;color:#fff;font-size:14px;font-weight:850}
@@ -163,6 +165,8 @@ footer{background:#102b52;color:#fff;padding:34px 0}
   .problem-grid{grid-template-columns:repeat(2,1fr)}
   .steps-grid{grid-template-columns:repeat(2,1fr)}
   .trust-grid{grid-template-columns:1fr}
+  .problems::after{font-size:100px}
+  .care-art::before{font-size:64px}
 }
 @media(max-width:600px){
   .wrap{width:min(100% - 28px,1180px)}
@@ -171,6 +175,8 @@ footer{background:#102b52;color:#fff;padding:34px 0}
   .problem-grid,.steps-grid,.ctas,form{grid-template-columns:1fr}
   .phone,.full{grid-column:auto}
   .hero::after{display:none}
+  .problems::after{font-size:60px}
+  .care-art::before{font-size:44px;left:16px;top:18px}
   .cal-frame{height:760px}
   .footer{flex-direction:column;align-items:flex-start}
   .float-wa{right:16px!important;bottom:18px!important}

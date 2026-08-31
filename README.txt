@@ -67,3 +67,25 @@ REVISIÓN (fixes aplicados en esta pasada):
   KitchenAid no funciona. Aquí la revisamos y la reparamos." Tamaño
   del H1 aumentado: clamp(38-57px) → clamp(46-74px) en escritorio,
   40px → 48px en móvil.
+
+REVISIÓN ADICIONAL (checklist unificado de la familia, a petición del cliente):
+- H1 repetía la plantilla "no funciona" usada en varios repos.
+  Reescrito con síntoma específico: "Tu KitchenAid se detiene a media
+  mezcla. La reparamos." (9 palabras).
+- BUG REAL — dos textos decorativos gigantes sin reducción de tamaño
+  en móvil/tablet: ".problems::after" ("KITCHENAID", 164px) y
+  ".care-art::before" ("MEZCLA", 100px). Añadida reducción en tablet
+  (100px/64px) y móvil (60px/44px).
+- El aviso de servicio independiente solo estaba en letra pequeña del
+  footer. Añadida la franja destacada bajo el menú.
+- Añadido "Sábados, domingos y días festivos estamos cerrados" debajo
+  del horario.
+- Enlace de política de privacidad: la casilla existía pero sin
+  enlace. Añadido a https://kelatos.com/privacy-policy/, en azul y
+  subrayado.
+- Botón "Atención Telefónica..." sin icono, a diferencia del de
+  WhatsApp. Añadido (verificado con cuidado el cierre de </a>, tras
+  el fallo detectado en TechMac).
+- Verificado: schema.org ya usaba correctamente el único teléfono que
+  tiene este repo; formulario correctamente conectado a
+  /api/contacto.
