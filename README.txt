@@ -1,5 +1,22 @@
 KitchenaidTech ONE PAGE
 
+REVISIÓN ADICIONAL (checklist unificado de la familia, a petición del cliente — repo 8/48):
+- BUG REAL — enlace de Cal.com desactualizado. Actualizado a
+  https://cal.com/kelatos/30min?embed=true&theme=light&attendeePhoneNumber=%2B34&overlayCalendar=true.
+- Verificado: el correo soporte@kelatos.com no aparece visible.
+- BUG REAL — el mensaje prellenado de WhatsApp decía "¡Hola Kelatos!".
+  Corregido a "¡Hola KitchenaidTech!" en el CTA del hero y en el botón
+  flotante.
+- Verificado: el menú móvil (#mainMenu) ya cierra correctamente al
+  seleccionar cualquier enlace.
+- Verificado: sin iconos ni imágenes con proporciones fijas
+  incorrectas.
+- Verificado: el H1 en móvil ya está en 48px.
+- BUG REAL — botones del hero (.cta) con border-radius de 16px y sin
+  estado hover. Aumentado a border-radius:999px; añadido
+  filter:brightness(.88) en wa/pickup y fondo navy sólido con texto
+  blanco en el botón de teléfono al pasar el ratón.
+
 REVISIÓN ADICIONAL (a petición del cliente):
 - BUG REAL — "en el logo no se ve el nombre": el archivo
   /assets/logo-kitchenaidtech.png es solo el isotipo (batidora +
