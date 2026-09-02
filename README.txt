@@ -129,3 +129,17 @@ REVISIÓN ADICIONAL (checklist unificado de la familia, a petición del cliente)
 - Verificado: schema.org ya usaba correctamente el único teléfono que
   tiene este repo; formulario correctamente conectado a
   /api/contacto.
+
+REVISIÓN ADICIONAL (nueva regla de menú móvil, a petición del cliente):
+- BUG REAL — la franja de aviso de independencia estaba dentro de
+  <header>, y el menú móvil desplegable (.links.open) se posiciona en
+  absoluto a top:78px dentro de ese mismo header, solapándose con la
+  franja al abrir el menú. Movida fuera de <header>, como hermana
+  justo después de él y antes del hero: sigue siendo la misma franja
+  amarilla de ancho completo (sin cambios de CSS).
+- Verificado: el header (.header{position:sticky;top:0}) ya se
+  mantenía fijo/pegado arriba al hacer scroll; no requería cambios.
+- Verificado de nuevo: el resto del checklist de 7 puntos (Cal.com,
+  correo oculto, WhatsApp con marca, cierre del menú móvil, iconos,
+  H1 móvil 48px, botones redondeados con hover) ya estaba aplicado de
+  una pasada anterior; no requería cambios.
