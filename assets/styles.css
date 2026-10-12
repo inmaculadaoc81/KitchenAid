@@ -73,7 +73,7 @@ h1{font-size:clamp(46px,5.6vw,74px);line-height:1.03;letter-spacing:-2.4px;margi
 .wa:hover,.pickup:hover{filter:brightness(.88)}
 .phone:hover{background:var(--navy);color:#fff}
 .cta svg{width:22px;height:22px;margin-right:8px;flex:0 0 22px}
-.wa{background:var(--green);color:#fff}
+.wa{background:var(--green);color:#fff}.quote{background:#17a398;color:#fff}
 .pickup{background:var(--blue);color:#fff}
 .phone{grid-column:1/-1;border:2px solid var(--navy);background:#fff;color:var(--navy)}
 
